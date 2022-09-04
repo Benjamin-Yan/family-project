@@ -1,0 +1,37 @@
+/* style the button */
+.btnout {
+    padding: 3px;
+    text-align: center;
+}
+
+.btn {
+    outline: none;
+    padding: 5px 20px;
+    border: black 0.5px dashed;
+    border-radius: 30px;
+    background-color: #8ac3f2d0;
+    color: #212bf3;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: rgb(241 250 54);
+    color: #a96c6c;
+}
+
+.btn.active {
+    background-color: #6C6;
+    color: aliceblue;
+}
+
+.btn:disabled {
+    color: #858484;
+}
+
+.btn:disabled:hover{
+    cursor: not-allowed;
+    background-color: #8ac3f2d0;
+    color: #858484;
+}

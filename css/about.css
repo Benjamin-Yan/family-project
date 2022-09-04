@@ -1,0 +1,114 @@
+/* about me main content */
+.headerr {
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.impho { /* head shot */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+    border-radius: 30%;
+}
+
+.imcen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+    border: #000 0px solid;
+    border-radius: 30px;
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7); /*陰影*/
+}
+
+.po32 {
+    padding: 32px 0 !important;
+}
+
+.po16 {
+    padding: 16px 0 !important;
+}
+
+.jusgey {
+    text-align: justify;
+}
+
+.w3-wide { /* 增大字距 */
+    letter-spacing:4px;
+}
+
+.w3-light-grey {
+    width: 100%;
+    background-color:#f1f1f1;
+    color: black;
+    border-radius: 15px;
+}
+
+.barin {
+    text-align:center;
+    padding: 4px 8px;
+    background-color:#bdce9f;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 0; /* prepare for the animation */
+}
+
+/* animatins */
+#ani1{ animation: jQuery-fill-1 2s forwards;}
+#ani2{ animation: jQuery-fill-2 2s forwards;}
+#ani3{ animation: jQuery-fill-3 2s forwards;}
+#ani4{ animation: jQuery-fill-4 2s forwards;}
+#ani5{ animation: jQuery-fill-5 2s forwards;}
+
+@keyframes jQuery-fill-1{ 100% { width: 95%;}} 
+@keyframes jQuery-fill-2{ 100% { width: 90%;}} 
+@keyframes jQuery-fill-3{ 100% { width: 85%;}} 
+@keyframes jQuery-fill-4{ 100% { width: 85%;}} 
+@keyframes jQuery-fill-5{ 100% { width: 75%;}} 
+
+#piechart {
+    display: block;
+    margin-left: 0;
+}
+
+@media (max-width: 600px) {
+    .impho {
+        width: 50%;
+    }
+}
+
+/* //////////////// */
+
+/* page pop up animation */
+#cont {
+    animation-name: animation;
+    position: relative;
+    animation-duration: 2s;
+}
+
+@keyframes animation { /* 由下往上 */
+    from {
+        opacity:0;
+        margin-top: 50px;
+    }
+    to {
+        opacity:1;
+        margin-top: 0;
+    }
+}
+
+.hide {
+    opacity:0;
+    left:-100%;
+}
+.show {
+    opacity:1;
+    left:0;
+}
+
+#about,#hobby,#ani5,#pie,#pho {
+    transition: all 1s;
+}

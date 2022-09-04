@@ -1,0 +1,97 @@
+.mr16 {
+    margin-right: 16px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+.w3-left {
+    float: left;
+}
+
+/* /////////////// */
+
+/* contact form */
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #e0c2a0;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    border-radius: 15px;
+    background-color: #e6cfcf;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after { /* Clear fix */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* ///////////////////// */
+
+/* page pop up animation */
+#cont {
+    animation-name: animation;
+    position: relative;
+    animation-duration: 2s;
+}
+
+@keyframes animation {
+    from {
+        opacity:0;
+        right:-100%;
+    }
+    to {
+        opacity:1;
+        right:0;
+    }
+}

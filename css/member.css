@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container:before,
+.container:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.container img {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-top: 75px;
+    float: left;
+    padding: 20px;
+    width: 30%;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+}
+
+.container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.mcontent {
+    float: left;
+    padding: 20px;
+    width: 70%;
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+.anidiv {
+    display: none;
+}

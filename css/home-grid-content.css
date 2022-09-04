@@ -1,0 +1,161 @@
+grid-container { /* 中間的12塊相當於article */
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+    padding: 20px 0; /*相當於article的padding*/
+    transition: all 0.3s; /*不一定有用*/
+}
+
+.cards { /*只用article的部分，左右留白不用(也就是第26行的中間12塊)*/
+    grid-column: 2 / span 12; /*從第二條線橫跨過去的共12格*/
+    display: grid; /*for nested grid*/
+    grid-template-columns: repeat(12, minmax(auto, 60px)); /*和父容器的大小維持一樣*/
+    grid-gap: 40px;
+    transition: all 0.3s; /*不一定有用*/
+}
+
+.card {
+    grid-column-end: span 4; /*代表每四格為一張卡*/
+    display: flex;
+    flex-direction: column; /*才能往下放置文字*/
+    background-color: #897622;
+    cursor: pointer;
+    transition: all 0.3s ease 0s; /*ease為快慢快*/
+    border-radius: 30px;
+}
+
+.card:hover {
+    transform: translateY(-7px); /*上移*/
+}
+
+.card__image-container {
+    width: 100%;
+    padding-top: 56.25%; /* 即圖片放置處 */
+    overflow: hidden; /* 讓圖片只在上方放置處顯現 */
+    position: relative; /*位置相對於前一個的父容器(也就是它本就該出現的地方，原本的空間仍會保留不會消失)*/
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;;
+}
+
+.card__image-container img {
+    width: 100%;
+    position: absolute;
+    /*位置相對於第一個的父容器或是有position: relative的上層容器，相當於便利貼
+    ，後面的元素會直接遞補，故它的container的padding-top要來把空間撐開*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card__content {
+    padding: 20px;
+}
+
+.card__title {
+    margin-bottom: 20px; /*作為和內容的分界*/
+}
+
+.card__info {
+    display: flex;
+    align-self: end;
+    align-items: center; /*垂直置中*/
+}
+
+.text--medium {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 20px; /*縮小行高(原為22)*/
+    font-weight: 400;
+    color: #ecf0f1;
+}
+
+.card__price {
+    margin-left: auto; /*向右對齊*/
+    padding: 5px 20px;
+    background-color: #303032;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .card {
+        grid-column-end: span 6; /*代表每六格為一張卡*/
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    grid-container {
+        grid-gap: 20px;
+    }
+
+    .card {
+        grid-column-end: span 12; /*小於700px就width=100%的概念*/
+    }
+}
+
+@media only screen and (max-width: 500px) { /*改變格線編排方式*/
+    grid-container {
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 10px;
+    }
+
+    .cards {
+        grid-column: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+
+    .card {
+        grid-column-end: span 6;
+    }
+}
+
+/* video overlay */
+.vidoverlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.vidoverlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.vidoverlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.vidoverlay .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    font-size: 60px;
+}
+
+#vdo {
+    width: 900px;
+    height: 506px;
+}
+
+@media screen and (max-height: 450px) {
+    .vidoverlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

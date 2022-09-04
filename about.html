@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta chartset="UTF-8">
+    <!--80個中文字以內(160個字元)，keyword用,隔開-->
+    <meta name="description" content="這個網頁是此project的about page, 主要功能是介紹作者我本人。">
+    <meta name="keywords" content="about,project,family,家人,我,太陽餅,介紹">
+    <meta name="author" content="太陽餅">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- javascript -->
+    <script src="javascript/hide-side-nav.js"></script>
+    <script src="javascript/snackbar.js"></script>
+</head>
+
+<body>
+    <!-- hidden navbar -->
+    <div id="hidesidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-fw fa-close"></i></a>
+        <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="member.html"><i class="fa fa-fw fa-user"></i> Member</a>
+        <a href="javascript:void(0)" onclick="Snack()"><i class="fa fa-fw fa-newspaper-o"></i> News</a>
+        <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="#"><i class="fa fa-fw fa-address-card"></i> About</a>
+    </div>
+
+    <div id="main">
+        <!-- NAVBAR -->
+        <div id="navbar">
+            <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="member.html"><i class="fa fa-fw fa-user"></i> Member</a>
+            <a href="javascript:void(0)" onclick="Snack()"><i class="fa fa-fw fa-newspaper-o"></i> News</a>
+            <div class="nav-right">
+                <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+                <a class="activee" href="#"><i class="fa fa-fw fa-address-card"></i> About</a>
+                <a href="javascript:void(0)" onclick="openNav()"><i class="fa fa-fw fa-bars"></i></a>
+            </div>
+        </div>
+
+        <marquee behavior="alternate" style="background-color:#f9f7b3;">最新消息: 完成home.html, member.html, contact.html和about.html了</marquee>
+
+        <div class="content">
+            <div id="cont">
+                <!-- Header -->
+                <header class="headerr">
+                    <b style="font-family:'Segoe Script';font-size: 64px;">Benjamin Yang</b><span style="font-size: 25px;"> (太陽餅)</span>
+                    <p>自學寫網頁的初心者</p>
+                </header>
+
+                <!-- Head Shot -->
+                <div class="po32">
+                    <h2>Line head shot</h2>
+                    <hr/><img src="https://profile.line-scdn.net/0hEeZvsSXXGkp3DzPJ7tlkNQdfGSBUfkNYXm0GKEdbRXkfPlQaDj1ce0QGEXhPalgdXWoBL0VcRHN7HG0saVnmfnA_RHhMOFUfWGxQrQ"
+                    alt="Line大頭照" class="impho">
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="po32 jusgey" id="about">
+                <h2>About</h2>
+                <hr/>
+                <p style="width: 980px;"> <!-- avoid jitter -->
+                    Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br/><br/>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br/>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio.
+                    Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed
+                    ullamcorper ipsum dignissim ac. In at libero sed
+                    nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+                    fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+                    Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+                    vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+                    vitae massa. Fusce luctus vestibulum augue ut
+                    aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a
+                    lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim
+                    ac. In at libero sed nunc venenatis imperdiet
+                    sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+                    fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing
+                    elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim
+                    ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula,
+                    facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+                    risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+                    venenatis imperdiet sed ornare turpis. Donec vitae
+                    dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+                    nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla
+                    et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+                    Mauris ante ligula, facilisis sed ornare eu, lobortis
+                    in odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget.
+                </p>
+            </div>
+
+            <div id="hobby">
+                <h3 class="po16">Hobby</h3>
+                <p class="w3-wide">Play Basketball</p>
+                <div class="w3-light-grey">
+                    <div class="barin" id="ani1">95%</div>
+                </div>
+                <p class="w3-wide">Web Design</p>
+                <div class="w3-light-grey">
+                    <div class="barin" id="ani2">90%</div>
+                </div>
+                <p class="w3-wide">Programming</p>
+                <div class="w3-light-grey">
+                    <div class="barin" id="ani3">85%</div>
+                </div>
+                <p class="w3-wide">Self growth books</p>
+                <div class="w3-light-grey">
+                    <div class="barin" id="ani4">85%</div>
+                </div>
+                <p class="w3-wide">Photography</p>
+                <div class="w3-light-grey">
+                    <div class="barin" id="ani5">75%</div>
+                </div><br/><br/>
+            </div>
+
+            <div id="pie">
+                <h3 style="padding-top: 16px;margin:0;">我會的程式語言學習比例</h3>
+                <div style="display: flex;justify-content: center;"> <!-- center the div -->
+                    <div id="piechart"></div>
+                </div><br/><br/><br/><hr/>
+            </div>
+
+            <div id="pho">
+                <img src="https://i.imgur.com/IvD7EUy.jpg" alt="屏東市立體育館" title="屏東市立體育館" class="imcen">
+                <p style="text-align: center;">我的攝影作品⇧</p>
+            </div>
+        </div>
+
+        <div id="snackbar">*本功能尚未完成*</div>
+
+        <div style="margin-left: 20px;">最近更新日期:&nbsp;2022.9.4</div>
+        <div style="text-align: right;"><a class="upp" href="#">▲</a></div>
+    </div>
+
+</body>
+
+<!-- google chart -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    // Draw the chart and set the chart values
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Programming languages', 'rate'],
+        ['Python', 3],
+        ['html', 2],
+        ['C++', 1.5],
+        ['C', 1.5],
+        ['Java', 0.8],
+        ['CSS', 0.7],
+        ['javascript', 0.5]
+    ]);
+   
+    // Optional; add a title and set the width and height of the chart
+    var options = {
+        // 'title':'我會的程式語言學習比例',
+        'width': 430,//圖片大小
+        'height': 400,
+        is3D: true,
+        // 'backgroundColor': '#FFCC80',
+        'backgroundColor' : 'transparent',
+        titleTextStyle: {
+        fontSize: 20,
+        },
+        'chartArea': {
+        'width': '100%',//圓餅大小
+        'height': '80%'
+        },
+        'legend': {'position': 'bottom',}
+    };
+   
+    // Display the chart inside the <div> element with id="piechart"
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+   }
+</script>
+
+<!-- page pop up animation -->
+<script>
+    myabout = document.getElementById("about");
+    myhobby = document.getElementById("hobby");
+    mypie = document.getElementById("pie");
+    mypho = document.getElementById("pho");
+
+    var myScrollFunc = function() {
+        var y = window.scrollY;
+        if (y >= 450) {
+            myabout.classList.add("show");
+            myabout.classList.remove("hide");
+        } else {
+            myabout.classList.add("hide");
+            myabout.classList.remove("show");
+        }
+
+        if (y >= 1150) {
+            myhobby.classList.add("show");
+            myhobby.classList.remove("hide");
+        } else {
+            myhobby.classList.add("hide");
+            myhobby.classList.remove("show");
+        }
+
+        if (y >= 1600) {
+            mypie.classList.add("show");
+            mypie.classList.remove("hide");
+        } else {
+            mypie.classList.add("hide");
+            mypie.classList.remove("show");
+        }
+
+        if (y >= 2100) {
+            mypho.classList.add("show");
+            mypho.classList.remove("hide");
+        } else {
+            mypho.classList.add("hide");
+            mypho.classList.remove("show");
+        }
+    };
+
+    window.addEventListener("scroll", myScrollFunc);
+</script>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta chartset="UTF-8">
+    <!--80個中文字以內(160個字元)，keyword用,隔開-->
+    <meta name="description" content="這個網頁是此project的member page, 主要功能是介紹我的家人們。">
+    <meta name="keywords" content="member,project,family,家人,介紹,line">
+    <meta name="author" content="太陽餅">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The member in my family</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/member.css">
+    <!-- javascript -->
+    <script src="javascript/hide-side-nav.js"></script>
+    <script src="javascript/snackbar.js"></script>
+</head>
+
+<body onload="showPage(1)">
+    <!-- hidden navbar -->
+    <div id="hidesidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-fw fa-close"></i></a>
+        <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#"><i class="fa fa-fw fa-user"></i> Member</a>
+        <a href="javascript:void(0)" onclick="Snack()"><i class="fa fa-fw fa-newspaper-o"></i> News</a>
+        <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="about.html"><i class="fa fa-fw fa-address-card"></i> About</a>
+    </div>
+
+    <div id="main">
+        <!-- NAVBAR -->
+        <div id="navbar">
+            <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a class="activee" href="#"><i class="fa fa-fw fa-user"></i> Member</a>
+            <a href="javascript:void(0)" onclick="Snack()"><i class="fa fa-fw fa-newspaper-o"></i> News</a>
+            <div class="nav-right">
+                <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+                <a href="about.html"><i class="fa fa-fw fa-address-card"></i> About</a>
+                <a href="javascript:void(0)" onclick="openNav()"><i class="fa fa-fw fa-bars"></i></a>
+            </div>
+        </div>
+
+        <marquee behavior="alternate" style="background-color:#f9f7b3;">最新消息: 完成home.html, member.html, contact.html和about.html了</marquee>
+
+        <div class="content">
+            <p>請選擇人物以觀看細節!</p>
+            <!--  buttom   -->
+            <div class="btnout">
+                <input type="button" class="btn btn0 active" value="爸" onclick="choose(1)">
+                <input type="button" class="btn btn0" value="咪" onclick="choose(2)">
+                <input type="button" class="btn btn0" value="姐" onclick="choose(3)">
+                <span style="position:relative;" onclick="alert('請至 About 觀看⁓')">
+                    <input type="button" class="btn btn0" value="秉" disabled>
+                    <div style="position:absolute; left:0; right:0; top:0; bottom:0;cursor: not-allowed;"></div>
+                </span>
+                <input type="button" class="btn btn0" value="凱" onclick="choose(5)">
+            </div>
+            <div id="space"></div>
+        </div>
+
+        <div id="snackbar">*本功能尚未完成*</div>
+
+        <div style="margin-left: 20px;">最近更新日期:&nbsp;2022.9.4</div>
+        <div style="text-align: right;"><a class="upp" href="#">▲</a></div>
+    </div>
+
+</body>
+
+<!-- hidden contents -->
+<div id="fa" hidden>
+    <div style="display:none;" id="fadiv" class="animate-bottom anidiv">
+        <div class="container">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Dad's photo" title="拔餔">
+
+            <div class="mcontent">
+                <h2>楊瑞祺</h2>
+                <p>
+                    Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br><br>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br><br>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio.
+                    Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed
+                    ullamcorper ipsum dignissim ac. In at libero sed
+                    nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+                    fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+                    Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+                    vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+                    vitae massa. Fusce luctus vestibulum augue ut
+                    aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a
+                    lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim
+                    ac. In at libero sed nunc venenatis imperdiet
+                    sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+                    fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing
+                    elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim
+                    ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula,
+                    facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+                    risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+                    venenatis imperdiet sed ornare turpis. Donec vitae
+                    dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+                    nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla
+                    et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+                    Mauris ante ligula, facilisis sed ornare eu, lobortis
+                    in odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa.
+                    Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+                    odio.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mo" hidden>
+    <div style="display:none;" id="modiv" class="animate-bottom anidiv">
+        <div class="container">
+            <img src="https://profile.line-scdn.net/0hl9D0ifxFMxZpSRkXQJVNaRkZMHxKOGoEQCx5c14ca3EDeydHR38rJF0dZXZQcHBARXt7JwlAPSZlWkRwdx_PIm55bSRSfnxDRip58Q"
+             alt="Mom's photo" title="咪咪">
+
+            <div class="mcontent">
+                <h2>蘇桂香</h2>
+                <p>
+                    Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br><br>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br><br>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio.
+                    Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed
+                    ullamcorper ipsum dignissim ac. In at libero sed
+                    nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+                    fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+                    Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+                    vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+                    vitae massa. Fusce luctus vestibulum augue ut
+                    aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a
+                    lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim
+                    ac. In at libero sed nunc venenatis imperdiet
+                    sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+                    fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing
+                    elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim
+                    ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula,
+                    facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+                    risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+                    venenatis imperdiet sed ornare turpis. Donec vitae
+                    dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+                    nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla
+                    et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+                    Mauris ante ligula, facilisis sed ornare eu, lobortis
+                    in odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa.
+                    Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+                    odio.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bs" hidden>
+    <div style="display:none;" id="bsdiv" class="animate-bottom anidiv">
+        <div class="container">
+            <img src="https://profile.line-scdn.net/0hTxyIppyVC1dUMB9W4q51KCRgCD13QVJFKlAUNWQ0BmE-CUUFLAIRZmhlVmY5Bx8EelMUYTM3UjNYI3wxSmb3Y1MAVWVvB0QCe1NBsA"
+             alt="Big sister's photo" title="姊姊">
+
+            <div class="mcontent">
+                <h2>楊鎔羽</h2>
+                <p>
+                    Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br><br>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br><br>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio.
+                    Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed
+                    ullamcorper ipsum dignissim ac. In at libero sed
+                    nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+                    fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+                    Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+                    vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+                    vitae massa. Fusce luctus vestibulum augue ut
+                    aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a
+                    lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim
+                    ac. In at libero sed nunc venenatis imperdiet
+                    sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+                    fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing
+                    elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim
+                    ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula,
+                    facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+                    risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+                    venenatis imperdiet sed ornare turpis. Donec vitae
+                    dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+                    nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla
+                    et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+                    Mauris ante ligula, facilisis sed ornare eu, lobortis
+                    in odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa.
+                    Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+                    odio.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ls" hidden>
+    <div style="display:none;" id="lsdiv" class="animate-bottom anidiv">
+        <div class="container">
+            <img src="https://profile.line-scdn.net/0hpIFqP5ncL2ZrCDirjS1RGRtYLAxIeXZ0FG9pAF8OcQZebG9lFWc0VVpbJANRPWs2RDwwA1ZcJl9nG1gAdV7TUmw4cVRQP2AzRGtlgQ"
+             alt="Little sister's photo" title="凱婷">
+
+            <div class="mcontent">
+                <h2>楊凱婷</h2>
+                <p>
+                    Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br><br>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br><br>Example text lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio.
+                    Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed
+                    ullamcorper ipsum dignissim ac. In at libero sed
+                    nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+                    fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+                    Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+                    vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+                    vitae massa. Fusce luctus vestibulum augue ut
+                    aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a
+                    lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim
+                    ac. In at libero sed nunc venenatis imperdiet
+                    sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+                    fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing
+                    elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim
+                    ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                    luctus vestibulum augue ut aliquet. Mauris ante ligula,
+                    facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+                    risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+                    venenatis imperdiet sed ornare turpis. Donec vitae
+                    dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+                    nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Phasellus imperdiet, nulla
+                    et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+                    Mauris ante ligula, facilisis sed ornare eu, lobortis
+                    in odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas
+                    nisl est, ultrices nec congue eget, auctor vitae massa.
+                    Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+                    odio.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- **不能用外部js...不然會抓不到** -->
+<script>
+    // page pop up animation
+    function showPage(p) {
+        if (p == 1) {
+            document.getElementById("fadiv").style.display = "block";
+        }
+        else if (p == 2) {
+            document.getElementById("modiv").style.display = "block";
+        }
+        else if (p == 3) {
+            document.getElementById("bsdiv").style.display = "block";
+        }
+        else {
+            document.getElementById("lsdiv").style.display = "block";
+        }
+    }
+
+    // choose
+    function choose(x) {
+        var sho;
+        if (x == 1) {
+            showPage(1);
+            sho = document.getElementById("fa").innerHTML;
+        }
+        else if (x == 2) {
+            showPage(2);
+            sho = document.getElementById("mo").innerHTML;
+        }
+        else if (x == 3) {
+            showPage(3);
+            sho = document.getElementById("bs").innerHTML;
+        }
+        else {
+            showPage(4);
+            sho = document.getElementById("ls").innerHTML;
+        }
+        document.getElementById("space").innerHTML = sho;
+    }
+    choose(1);// default
+</script>
+
+<script>
+    // button-active(btn0代表會顯示active的)
+    const triggers = document.querySelectorAll('input.btn0');
+
+    function clearActive() { /*清除原先active的*/
+        var activeLink = document.querySelector('.active');
+        if (activeLink != null) {
+            activeLink.classList.remove("active");
+        }
+    }
+
+    triggers.forEach(element => {
+        element.addEventListener('click', function () {
+            clearActive();
+            element.classList.add('active');
+        })
+    });
+</script>
+
+</html>

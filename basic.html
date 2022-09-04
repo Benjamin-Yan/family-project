@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta chartset="UTF-8">
+    <!--80個中文字以內(160個字元)，keyword用,隔開-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="太陽餅">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page basic elements</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <!-- javascript -->
+    <script src="javascript/hide-side-nav.js"></script>
+    <script src="javascript/snackbar.js"></script>
+</head>
+
+<body>
+    <!-- hidden navbar -->
+    <div id="hidesidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-fw fa-close"></i></a>
+        <a href="咪影片網頁.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="people.html"><i class="fa fa-fw fa-user"></i> Member</a>
+        <a href="javascript:void(0)" onclick="Snack()"><i class="fa fa-fw fa-newspaper-o"></i> News</a>
+        <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="javascript:void(0)" onclick="Snack()"><i class="fa fa-fw fa-address-card"></i> About</a>
+    </div>
+
+    <div id="main">
+        <!-- NAVBAR -->
+        <div id="navbar">
+            <a href="咪影片網頁.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="people.html"><i class="fa fa-fw fa-user"></i> Member</a>
+            <a href="javascript:void(0)" onclick="Snack()"><i class="fa fa-fw fa-newspaper-o"></i> News</a>
+            <div class="nav-right">
+                <a class="activee" href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+                <a href="javascript:void(0)" onclick="Snack()"><i class="fa fa-fw fa-address-card"></i> About</a>
+                <a href="javascript:void(0)" onclick="openNav()"><i class="fa fa-fw fa-bars"></i></a>
+            </div>
+        </div>
+
+        <marquee behavior="alternate" style="background-color:#f9f7b3;">最新消息: 完成home.html, member.html, contact.html和about.html了</marquee>
+
+        <div class="content">
+            <p></p>
+        </div>
+
+        <div id="snackbar">*本功能尚未完成*</div>
+
+        <div>最近更新日期:&nbsp;2022.9.4</div>
+        <div style="text-align: right;"><a class="upp" href="#">▲</a></div>
+    </div>
+
+</body>
+
+</html>
