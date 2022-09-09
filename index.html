@@ -85,6 +85,11 @@
                     <p id="motto"></p>
                 </div>
                 <hr/><p id="wifi">現在連網狀態: </p>
+
+                <div>
+                    <div>如果有運動就按下按鈕，一天只能最多按一次⁓<br/><button onclick="clickCounter()" type="button" id="clickBtn">運動一天</button>&nbsp;(超過24點就會重置按鈕)<br/><p id="buttonCount" style="margin: 0 0 10px 0;"></p></div>
+                </div>
+
                 <div id="slidedots">
                     <span class="slidedot" onclick="currentSlide(1)"></span>
                     <span class="slidedot" onclick="currentSlide(2)"></span>
@@ -250,6 +255,62 @@
         //更新顯示
         slides[slideIndex-1].style.display = "block"; //display照片
         dots[slideIndex-1].className += " slideactive";
+    }
+</script>
+
+<!-- 運動次數計算 -->
+<script>
+    function showCount(clicktime) {
+        if (typeof(Storage) !== "undefined") {
+            document.getElementById("buttonCount").innerHTML = "已經運動 " + clicktime + " 次了!";
+        } else {
+            document.getElementById("buttonCount").innerHTML = "抱歉，此瀏覽器不支援網頁儲存...";
+        }
+    }
+
+    window.onload = function() {
+        showCount(localStorage.clickcount);
+        btnUsage();
+        countdown("Oct 6, 2022 22:30:00", "country");//countDown
+    }
+
+    function btnUsage() {
+        // localStorage.removeItem("dateDisableButton");
+  
+        var myDate = localStorage.getItem('dateDisableButton');
+        if (myDate == null) {
+            var myDate = new Date();
+            myDate.setHours(24,0,0);//alert(myDate);
+            localStorage.setItem('dateDisableButton', myDate);
+        } else {
+            if (new Date().getTime() > new Date(myDate).getTime()) { //一定要有new Date()才可以把string轉成date格式
+                document.getElementById("clickBtn").disabled = false;//alert("fff");
+            }
+            else {
+                document.getElementById("clickBtn").disabled = true;//alert("ggg");
+            }
+        }
+    }
+
+    function clickCounter() {
+        if (typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            showCount(localStorage.clickcount);
+        } else {
+            document.getElementById("buttonCount").innerHTML = "抱歉，此瀏覽器不支援網頁儲存...";
+        }
+
+        // 以下為更改btn的可用性
+        var myDate = localStorage.getItem('dateDisableButton');
+        if (new Date().getTime() > new Date(myDate).getTime()) {
+            localStorage.removeItem("dateDisableButton");
+            btnUsage(); //更新時間
+        }
+        document.getElementById("clickBtn").disabled = true; //按下去不管如何都disable
     }
 </script>
 
