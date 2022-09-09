@@ -1,7 +1,7 @@
 // count down
-window.onload = function() {
-    countdown("Oct 6, 2022 22:30:00", "country");
-}
+// window.onload = function() {
+//     countdown("Oct 6, 2022 22:30:00", "country");
+// }
 
 function countdown(timestring, showid) {
     // Set the date we're counting down to
