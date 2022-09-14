@@ -1,10 +1,12 @@
 // Youtube API + video overlay
 
 var vlink1 = "https://www.youtube.com/embed/fLvqnKO7_YE?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
-var vlink2 = "https://www.youtube.com/embed/3bQPu-JdvTU?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink2 = "https://www.youtube.com/embed/peXO2RClMsM?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
 var vlink3 = "https://www.youtube.com/embed/16JKls_thxQ?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
 var vlink4 = "https://www.youtube.com/embed/LTVecjWlGII?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
 var vlink5 = "https://www.youtube.com/embed/sl3kv7b7kMI?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink6 = "https://www.youtube.com/embed/0R6r2-nDkNk?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink7 = "https://www.youtube.com/embed/ncNO0Oin9H8?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
 
 function choosefrom(yid) {
     if (yid == 1) {
@@ -19,8 +21,14 @@ function choosefrom(yid) {
     else if (yid == 4) {
         document.getElementById("vdo").src = vlink4;
     }
-    else {
+    else if (yid == 5) {
         document.getElementById("vdo").src = vlink5;
+    }
+    else if (yid == 6) {
+        document.getElementById("vdo").src = vlink6;
+    }
+    else {
+        document.getElementById("vdo").src = vlink7;
     }
 }
 
