@@ -5,8 +5,15 @@ var vlink2 = "https://www.youtube.com/embed/peXO2RClMsM?rel=1&amp;controls=1&amp
 var vlink3 = "https://www.youtube.com/embed/16JKls_thxQ?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
 var vlink4 = "https://www.youtube.com/embed/LTVecjWlGII?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
 var vlink5 = "https://www.youtube.com/embed/sl3kv7b7kMI?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
-var vlink6 = "https://www.youtube.com/embed/0R6r2-nDkNk?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
-var vlink7 = "https://www.youtube.com/embed/ncNO0Oin9H8?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink6 = "https://www.youtube.com/embed/ncNO0Oin9H8?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink7 = "https://www.youtube.com/embed/OQHoO7wJ1Qo?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink8 = "https://www.youtube.com/embed/0EElfko5FZk?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink9 = "https://www.youtube.com/embed/ZEpFVLui95U?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink10 = "https://www.youtube.com/embed/EM3Gpx8Rbrg?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink11 = "https://www.youtube.com/embed/ky5lvqmXOi4?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink12 = "https://www.youtube.com/embed/jpz-fOIpv3s?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink13 = "https://www.youtube.com/embed/S5RCiYVEQYc?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
+var vlink14 = "https://www.youtube.com/embed/7jYvKjokaoI?rel=1&amp;controls=1&amp;showinfo=0&amp;start=1&enablejsapi=1";
 
 function choosefrom(yid) {
     if (yid == 1) {
@@ -27,8 +34,29 @@ function choosefrom(yid) {
     else if (yid == 6) {
         document.getElementById("vdo").src = vlink6;
     }
-    else {
+    else if (yid == 7) {
         document.getElementById("vdo").src = vlink7;
+    }
+    else if (yid == 8) {
+        document.getElementById("vdo").src = vlink8;
+    }
+    else if (yid == 9) {
+        document.getElementById("vdo").src = vlink9;
+    }
+    else if (yid == 10) {
+        document.getElementById("vdo").src = vlink10;
+    }
+    else if (yid == 11) {
+        document.getElementById("vdo").src = vlink11;
+    }
+    else if (yid == 12) {
+        document.getElementById("vdo").src = vlink12;
+    }
+    else if (yid == 13) {
+        document.getElementById("vdo").src = vlink13;
+    }
+    else {
+        document.getElementById("vdo").src = vlink14;
     }
 }
 

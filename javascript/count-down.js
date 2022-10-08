@@ -2,6 +2,7 @@
 // window.onload = function() {
 //     countdown("Oct 6, 2022 22:30:00", "country");
 // }
+// 更新倒數日期請至index.html更新
 
 function countdown(timestring, showid) {
     // Set the date we're counting down to
